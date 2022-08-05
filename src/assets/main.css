@@ -1,0 +1,12 @@
+@import "./base.css";
+
+
+
+#app {
+  display: grid;
+  font-weight: normal;
+  width: 100vw;
+  height: 100vh;
+  grid: max-content 1fr / 1fr;
+}
+
