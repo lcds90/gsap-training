@@ -70,7 +70,7 @@ npm run lint
 
 # Checklist ✔️
 
-## ➡️➡️ Introduction Steps 😀
+## ➡️ Introduction Steps 😀
 
 - [ ] [Get Started](https://greensock.com/get-started/)
 - [ ] [Get Started | Part 2](https://greensock.com/get-started-2/)
