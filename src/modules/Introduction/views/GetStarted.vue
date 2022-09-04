@@ -1,0 +1,3 @@
+<template>
+    Get Started! 🥳
+</template>
