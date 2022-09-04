@@ -67,7 +67,6 @@ npm run lint
 
 </details>
 
-</br>
 
 # Checklist ✔️
 
