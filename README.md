@@ -1,5 +1,10 @@
 # console-learning
 
+<details>
+
+<summary>Detalhamento original</summary>
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
@@ -57,3 +62,38 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```sh
 npm run lint
 ```
+
+</details>
+
+</br>
+
+# Checklist
+
+## Overview
+
+- [ ] [Get Started](https://greensock.com/get-started/)
+- [ ] [Get Started | Part 2](https://greensock.com/get-started-2/)
+- [ ] [GSAP 3 Express](https://www.creativecodingclub.com/courses/FreeGSAP3Express?ref=44f484)
+- [ ] [Scroll Trigger Express](https://www.creativecodingclub.com/courses/scrolltrigger-express?ref=44f484)
+- [ ] [Quick Tutorial](https://www.youtube.com/watch?v=m6PDUIF24v4&ab_channel=WebDevSimplified)
+
+## Understand
+
+- [ ] [Handling Conflicts](https://greensock.com/conflict/)
+- [ ] [Keyframes](https://greensock.com/understanding-keyframes/)
+- [ ] [Position Parameter](https://greensock.com/position-parameter/)
+- [ ] [Scroll Trigger 3 Easy Steps](https://greensock.com/st-get-started/)
+- [ ] [Tips for efficiently](https://css-tricks.com/tips-for-writing-animation-code-efficiently/)
+- [ ] [GSAP 3 Features](https://greensock.com/gsap3-features/)
+- [ ] [Yoyo Ease](https://greensock.com/yoyoease/)
+- [ ] [Immediate Render](https://greensock.com/immediaterender/)
+## Mini projects
+
+- [ ] [Meta GSAP](https://css-tricks.com/going-meta-gsap-the-quest-for-perfect-infinite-scrolling/)
+- [ ] [Dynamic Masks](https://tympanus.net/codrops/2021/05/04/dynamic-css-masks-with-custom-properties-and-gsap/)
+- [ ] [Color Dials](https://www.motiontricks.com/hsla-color-dials-with-maprange/)
+
+## Avoid Mistakes
+
+- [ ] [GSAP Mistakes](https://greensock.com/mistakes/)
+- [ ] [Scroll Trigger](https://greensock.com/st-mistakes/)
