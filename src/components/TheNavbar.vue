@@ -1,9 +1,15 @@
 <template>
   <nav class="navbar">
     <ul>
-      <li><router-link to="/">🏠 Home</router-link></li>
-      <li><router-link to="/about">🎨 Sobre o projeto</router-link></li>
-      <li><router-link to="/contact">🧑‍💻 Contato</router-link></li>
+      <li>
+        <router-link to="/">🏠 {{ $t("navbar.home") }} </router-link>
+      </li>
+      <li>
+        <router-link to="/about">🎨 {{ $t("navbar.about") }}</router-link>
+      </li>
+      <li>
+        <router-link to="/contact">🧑‍💻 {{ $t("navbar.contact") }}</router-link>
+      </li>
     </ul>
   </nav>
 </template>
