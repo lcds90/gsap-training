@@ -1,8 +1,10 @@
-# console-learning
+# GSAP training 🎨
+
+> Repositório para aprendizado da biblioteca *GSAP* 🧑‍🎨
 
 <details>
 
-<summary>Detalhamento original</summary>
+<summary>ℹ️ Detalhamento técnico</summary>
 
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -67,9 +69,9 @@ npm run lint
 
 </br>
 
-# Checklist
+# Checklist ✔️
 
-## Overview
+## ➡️➡️ Introduction Steps 😀
 
 - [ ] [Get Started](https://greensock.com/get-started/)
 - [ ] [Get Started | Part 2](https://greensock.com/get-started-2/)
@@ -77,7 +79,7 @@ npm run lint
 - [ ] [Scroll Trigger Express](https://www.creativecodingclub.com/courses/scrolltrigger-express?ref=44f484)
 - [ ] [Quick Tutorial](https://www.youtube.com/watch?v=m6PDUIF24v4&ab_channel=WebDevSimplified)
 
-## Understand
+## ➡️ Understand 🤔
 
 - [ ] [Handling Conflicts](https://greensock.com/conflict/)
 - [ ] [Keyframes](https://greensock.com/understanding-keyframes/)
@@ -87,13 +89,13 @@ npm run lint
 - [ ] [GSAP 3 Features](https://greensock.com/gsap3-features/)
 - [ ] [Yoyo Ease](https://greensock.com/yoyoease/)
 - [ ] [Immediate Render](https://greensock.com/immediaterender/)
-## Mini projects
+## ➡️ Mini projects 🤓
 
 - [ ] [Meta GSAP](https://css-tricks.com/going-meta-gsap-the-quest-for-perfect-infinite-scrolling/)
 - [ ] [Dynamic Masks](https://tympanus.net/codrops/2021/05/04/dynamic-css-masks-with-custom-properties-and-gsap/)
 - [ ] [Color Dials](https://www.motiontricks.com/hsla-color-dials-with-maprange/)
 
-## Avoid Mistakes
+## ➡️ Avoid Mistakes 😉
 
 - [ ] [GSAP Mistakes](https://greensock.com/mistakes/)
 - [ ] [Scroll Trigger](https://greensock.com/st-mistakes/)
