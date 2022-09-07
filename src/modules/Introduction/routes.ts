@@ -5,22 +5,32 @@ export default {
   component: modules.IntroductionModule,
   children: [
     {
-      text: "Get Started",
+      name: "Introdução",
+      path: "/introduction",
+      component: modules.IndexIntroduction,
+    },
+    {
+      name: "Get Started",
       path: "/introduction/get-started",
       component: modules.GetStarted,
     },
     {
-      text: "GSAP 3 Express",
+      name: "Get Started",
+      path: "/introduction/get-started",
+      component: modules.GetStarted,
+    },
+    {
+      name: "GSAP 3 Express",
       path: "/introduction/express-gsap",
       component: modules.ExpressGsap,
     },
     {
-      text: "Scroll Trigger Express",
+      name: "Scroll Trigger Express",
       path: "/introduction/express-scroll-trigger",
       component: modules.ExpressScrollTrigger,
     },
     {
-      text: "Quick Tutorial",
+      name: "Quick Tutorial",
       path: "/introduction/quick-tutorial",
       component: modules.QuickTutorial,
     },

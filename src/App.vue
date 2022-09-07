@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import { TheNavbar } from "./components/";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+
+const elements = [
+  { path: "/", text: `🏠 ${t("navbar.home")}` },
+  { path: "/contact", text: `🧑‍💻 ${t("navbar.contact")}` },
+];
 </script>
 <template>
   <div class="container">
-    <TheNavbar></TheNavbar>
+    <the-navbar size="medium" :elements="elements" />
     <router-view></router-view>
   </div>
 </template>
@@ -23,5 +30,6 @@ import { TheNavbar } from "./components/";
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
+  background-color: #d8d8d8;
 }
 </style>
