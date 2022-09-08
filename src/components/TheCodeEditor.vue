@@ -12,6 +12,7 @@ import TheClipboard from "./TheClipboard.vue";
 interface IProps {
   title: string;
   code: string;
+  func?: any;
 }
 
 const props = defineProps<IProps>();
@@ -20,11 +21,14 @@ const highlighter = (code: string) => {
   return highlight(code, languages.js, "javascript"); // languages.<insert language> to return html with markup
 };
 
-const text = ref(`const ${props.title.replaceAll(".", "_")} = ${props.code}`);
+const formattedTitle = props.title.replace(new RegExp("\\.", "g"), "_");
+
+const text = ref(`const ${formattedTitle} = ${props.code}`);
 </script>
 
 <template>
   <div class="relative">
+    <slot />
     <h6>{{ title }}</h6>
     <prism-editor
       class="my-editor"
@@ -33,20 +37,38 @@ const text = ref(`const ${props.title.replaceAll(".", "_")} = ${props.code}`);
       readonly
       v-model="text"
     ></prism-editor>
-    <the-clipboard class="absolute" :text-to-copy="text" />
+    <div class="absolute">
+      <the-clipboard :text-to-copy="text" />
+      <button class="run-code" @click="() => func()">Rodar Código</button>
+    </div>
   </div>
 </template>
 
 <style scoped>
+:deep(textarea) {
+  cursor: default;
+}
 .relative {
   position: relative;
 }
 
+.run-code {
+  width: 100%;
+  padding: 5px;
+  background-color: transparent;
+  transition: all 1s ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 0.5px grey solid;
+}
+
 .absolute {
   position: absolute;
-  bottom: -30px;
-  left: 0;
+  top: 0;
+  right: 0;
   width: 25%;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
 }
 /* required class */
 .my-editor {
@@ -64,5 +86,6 @@ const text = ref(`const ${props.title.replaceAll(".", "_")} = ${props.code}`);
 /* optional class for removing the outline */
 .prism-editor__textarea:focus {
   outline: none;
+  cursor: auto;
 }
 </style>

@@ -33,12 +33,15 @@ button {
   width: 100%;
   padding: 5px;
   background-color: transparent;
-  transition: all 1s ease;
+  transition: all 0.25s ease-out;
   cursor: pointer;
+  background: #ffffff;
+  border: 0.5px grey solid;
 }
 
 .with-success {
   background-color: rgb(143, 237, 143);
   color: black;
+  box-shadow: 0 0 25px rgba(76, 255, 52, 0.75);
 }
 </style>

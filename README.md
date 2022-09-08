@@ -72,7 +72,7 @@ npm run lint
 
 ## ➡️ Introduction Steps 😀
 
-- [ ] [Get Started](https://greensock.com/get-started/)
+- [x] [Get Started](https://greensock.com/get-started/)
 - [ ] [Get Started | Part 2](https://greensock.com/get-started-2/)
 - [ ] [GSAP 3 Express](https://www.creativecodingclub.com/courses/FreeGSAP3Express?ref=44f484)
 - [ ] [Scroll Trigger Express](https://www.creativecodingclub.com/courses/scrolltrigger-express?ref=44f484)
