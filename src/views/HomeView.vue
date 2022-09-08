@@ -10,6 +10,7 @@ const elements = [{ path: "/introduction", text: `🎨 Introdução` }];
       :secondary="true"
       size="small"
       :elements="elements"
+      :delay="0.5"
     ></the-navbar>
     <router-view></router-view>
   </div>

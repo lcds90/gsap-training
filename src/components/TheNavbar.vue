@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { reactive } from "vue";
+import { onMounted, reactive, ref } from "vue";
+import gsap from "gsap";
+
+const navbar = ref();
 
 type Size = "small" | "medium" | "large";
 interface IProps {
@@ -8,6 +11,7 @@ interface IProps {
     path: string;
   }[];
   size: Size;
+  delay?: number;
   secondary?: boolean;
 }
 const props = defineProps<IProps>();
@@ -18,10 +22,19 @@ const classObject = reactive({
   normal: ["medium", "large"].includes(props.size),
   secondary: props.secondary,
 });
+
+onMounted(() => {
+  gsap.from(navbar.value, {
+    delay: props.delay,
+    y: -200,
+    ease: "power3",
+    duration: 1.25,
+  });
+});
 </script>
 
 <template>
-  <nav :class="classObject">
+  <nav ref="navbar" :class="classObject">
     <div class="navbar-item" v-for="item in elements" :key="item.path">
       <router-link :class="{ secondaryLink: secondary }" :to="item.path">
         {{ item.text }}
@@ -39,7 +52,7 @@ const classObject = reactive({
   border-bottom: 1px solid grey;
   gap: 25px;
   background: linear-gradient(190deg, #d8d8d8, white);
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.05);
 }
 
 .secondary {
@@ -56,7 +69,7 @@ const classObject = reactive({
 
 .navbar-item {
   border: 1px solid black;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
   background: rgb(234, 234, 234);
   color: rgb(69, 69, 69);
   width: 100%;

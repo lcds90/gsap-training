@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
+import gsap from "gsap";
+
 interface IProps {
   elements: {
     text: string;
@@ -7,10 +10,20 @@ interface IProps {
 }
 
 defineProps<IProps>();
+
+const sidebar = ref();
+
+onMounted(() => {
+  gsap.from(sidebar.value, {
+    x: -100,
+    duration: 1,
+    opacity: 0.15,
+  });
+});
 </script>
 
 <template>
-  <aside>
+  <aside ref="sidebar">
     <div v-for="item in elements" :key="item.path">
       <router-link :to="item.path">
         {{ item.text }}
@@ -31,7 +44,7 @@ aside {
 
 a {
   border: 1px solid black;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
   background: rgb(234, 234, 234, 0.5);
   width: 100%;
   height: 100%;
@@ -47,9 +60,9 @@ a:visited {
 }
 
 a.router-link-active {
-  border: 1px solid rgba(176, 237, 143, 0.995);
+  border: 1px solid rgb(176, 237, 143);
   color: rgb(77, 117, 9);
-  background: rgb(234, 234, 234, 0.75);
+  background: rgb(234, 234, 234);
   /* border: 1px solid green !important; */
 }
 </style>

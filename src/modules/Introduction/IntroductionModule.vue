@@ -24,7 +24,9 @@ const elements = [
 <template>
   <div id="introduction-module">
     <the-sidebar :elements="elements"></the-sidebar>
-    <router-view />
+    <div class="introduction-container">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -33,7 +35,16 @@ const elements = [
   width: 100%;
   height: 100%;
   display: grid;
-  gap: 25px;
   grid-template-columns: 0.15fr 1fr;
+  overflow: hidden;
+}
+
+.introduction-container {
+  border: 0.25px solid #acacac;
+  padding: 25px;
+  margin: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  background: #e4e4e4;
 }
 </style>
