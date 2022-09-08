@@ -17,14 +17,12 @@ export default {
         "Nessa seção será abordado o funcionamento e as principais funções que o GSAP possuí",
       can_animate:
         "É possível animar qualquer propriedade de qualquer tipo de elemento:",
-      objective: `A biblioteca tem como resposanbilidade abstrair peculiaridades de
-      qualquer navegador gerando maior compatibilidade, tamanho em relação a unidades, precendecias de
-      seletores e a facilidade de oferecer o objetivo que é executar uma
-      animação facil com diversas propriedades e possibilidades.`,
+      objective:
+        "A biblioteca tem como resposanbilidade abstrair peculiaridades de qualquer navegador gerando maior compatibilidade, tamanho em relação a unidades, precendecias de seletores e a facilidade de oferecer o objetivo que é executar uma animação facil com diversas propriedades e possibilidades.",
       about_api:
         "A API já possui várias funções prontas para uso e são bem auto-descritivas",
       syntax:
-        "A syntax da biblioteca se dá por: <br /> <strong>(Método) </strong><em>#Alvo</em> {Propriedades da animação}",
+        "A syntax da biblioteca se dá por: <b>Método</b>-<b>Alvo</b>-<b>Propriedades da animação</b>",
       functions: {
         title: "Funções",
       },

@@ -64,7 +64,7 @@ const blueBoxFromTo = () => {
       <article>
         <em class="hint">{{ t("api_basics.about_api") }}</em>
         <p>{{ t("api_basics.objective") }}</p>
-        <p v-html="t('api_basics.syntax')"></p>
+        <p v-html="t('api_basics.syntax')" />
       </article>
       <article>
         <p>{{ t("examples") }}</p>
