@@ -42,9 +42,7 @@ const blueBoxFromTo = () => {
           href="https://greensock.com/docs/v3/Installation?checked=core#codepen:~:text=GSAP%203%20Install%20Helper"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          link
-        </a>
+        >link</a>
         {{ t("install.visit_about") }}
       </article>
     </section>
@@ -129,15 +127,16 @@ ul {
 li {
   font-weight: 600;
   font-style: oblique;
-  color: #2c2c2c;
+  color: var(--color-heading)
 }
 
 main {
-  font-size: 1.25rem;
+
 }
 
 section {
-  background: #dbdbdb;
+  color: var(--color-text);
+  background-color: var(--color-background);
   padding: 25px;
   margin-bottom: 25px;
   border-bottom: 2px solid black;
@@ -146,9 +145,9 @@ section {
 article {
   margin-block: 15px;
   padding: 25px;
-  background-color: #e4e4e4;
+  background-color: var(--color-background-mute);
   border-radius: 4px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 2px var(--color-border);
 }
 
 .hint {
@@ -159,7 +158,6 @@ article {
   padding: 5px;
   border-radius: 5px;
   letter-spacing: 0.25px;
-  font-size: 1rem;
   text-align: center;
 }
 

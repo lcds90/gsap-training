@@ -43,8 +43,8 @@ const elements = [
   border: 0.25px solid #acacac;
   padding: 25px;
   margin: 10px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px var(--color-border);
   overflow-y: scroll;
-  background: #e4e4e4;
+  background-color: var(--color-background-soft);
 }
 </style>

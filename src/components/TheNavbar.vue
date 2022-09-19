@@ -49,14 +49,14 @@ onMounted(() => {
   width: 100%;
   justify-items: center;
   padding: 10px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid  var(--color-text);
   gap: 25px;
-  background: linear-gradient(190deg, #d8d8d8, white);
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(315deg,  var(--color-background-soft), var(--color-background-mute));
+  box-shadow: 0 5px 4px var(--color-border);
 }
 
 .secondary {
-  background: linear-gradient(50deg, #ededed, #d8d8d8);
+  background: linear-gradient(315deg, var(--color-background-mute), var(--color-background-soft));
 }
 
 .normal {
@@ -68,10 +68,10 @@ onMounted(() => {
 }
 
 .navbar-item {
-  border: 1px solid black;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
-  background: rgb(234, 234, 234);
-  color: rgb(69, 69, 69);
+  border: 1px solid  var(--color-text);
+  box-shadow: 0 2px 1px  var(--color-border);
+  background: linear-gradient(315deg, var(--color-background) 95%, rgb(143, 237, 143));
+  color: var(--color-heading);
   width: 100%;
   height: 100%;
   text-align: center;
@@ -84,13 +84,7 @@ a {
   padding: 5px;
   display: inline-block;
   transition: all 0.35s ease;
-  font-size: 1rem;
   border: 1px solid transparent;
-}
-
-a:visited {
-  color: darkblue;
-  background: blue;
 }
 
 a.router-link-active {
@@ -99,7 +93,7 @@ a.router-link-active {
 }
 
 a.router-link-active.secondaryLink {
-  background-color: rgba(143, 237, 143, 0.15);
+  background-color: rgba(16, 253, 16, 0.637);
   border: 1px solid green !important;
 }
 </style>

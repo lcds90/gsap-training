@@ -58,8 +58,9 @@ const text = ref(`const ${formattedTitle} = ${props.code}`);
   background-color: transparent;
   transition: all 1s ease;
   cursor: pointer;
-  background: #ffffff;
-  border: 0.5px grey solid;
+  background: rgb(176, 237, 143);
+  color: black;
+  border: 0;
 }
 
 .absolute {

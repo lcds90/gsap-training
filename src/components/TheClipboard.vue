@@ -35,8 +35,9 @@ button {
   background-color: transparent;
   transition: all 0.25s ease-out;
   cursor: pointer;
-  background: #ffffff;
-  border: 0.5px grey solid;
+  background: rgb(176, 237, 143);
+  color: black;
+  border: 0;
 }
 
 .with-success {

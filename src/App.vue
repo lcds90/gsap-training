@@ -16,20 +16,12 @@ const elements = [
 </template>
 
 <style>
-* {
-  font-family: "Times New Roman", Times, serif;
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
-
 .container {
   display: grid;
   grid: max-content 1fr / 1fr;
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
-  background-color: #d8d8d8;
+  background-color: var(--color-background-soft);
 }
 </style>

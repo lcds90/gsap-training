@@ -34,8 +34,8 @@ onMounted(() => {
 
 <style scoped>
 aside {
-  background-color: #b5b5b5;
-  border-right: 1.5px solid black;
+  background-color: var(--color-background-mute);
+  border-right: 1.5px solid var(--color-text);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -43,16 +43,17 @@ aside {
 }
 
 a {
-  border: 1px solid black;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05);
-  background: rgb(234, 234, 234, 0.5);
+  box-shadow: 0 0 1px var(--color-border);
   width: 100%;
   height: 100%;
   text-align: center;
   display: grid;
   place-items: center;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.5s ease;
+  font-weight: 700;
+  border: 1px solid transparent;
+  background: var(--color-border)
 }
 
 a:visited {
@@ -62,7 +63,18 @@ a:visited {
 a.router-link-active {
   border: 1px solid rgb(176, 237, 143);
   color: rgb(77, 117, 9);
-  background: rgb(234, 234, 234);
-  /* border: 1px solid green !important; */
+  background: var(--color-background-mute);
 }
+
+@media (prefers-color-scheme: dark) {
+  a {
+  background: radial-gradient(circle at center, var(--color-border-hover) 0%, var(--color-border) 75%, var(--color-border-hover) 100%);
+  }
+  a.router-link-active {
+    background: var(--color-text);
+  }
+}
+
+
+
 </style>
