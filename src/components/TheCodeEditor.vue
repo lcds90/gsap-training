@@ -3,7 +3,7 @@
 import { PrismEditor } from "vue-prism-editor";
 import "vue-prism-editor/dist/prismeditor.min.css"; // import the styles somewhere
 import "prismjs/themes/prism-tomorrow.css"; // import syntax highlighting styles
-
+import gsap from "gsap";
 // import highlighting library (you can use any library you want just return html string)
 import { ref } from "vue";
 import { highlight, languages } from "prismjs";
@@ -16,9 +16,26 @@ interface IProps {
 }
 
 const props = defineProps<IProps>();
+const runCode = ref<HTMLElement>();
 
 const highlighter = (code: string) => {
   return highlight(code, languages.js, "javascript"); // languages.<insert language> to return html with markup
+};
+
+const runCodeClass = () => {
+  props.func();
+  gsap.fromTo(
+    runCode.value as HTMLElement,
+    {
+      background: "blue",
+      color: "darkblue",
+      duration: 1,
+    },
+    {
+      color: "black",
+      background: "#ffffff",
+    }
+  );
 };
 
 const formattedTitle = props.title.replace(new RegExp("\\.", "g"), "_");
@@ -39,7 +56,9 @@ const text = ref(`const ${formattedTitle} = ${props.code}`);
     ></prism-editor>
     <div class="absolute">
       <the-clipboard :text-to-copy="text" />
-      <button class="run-code" @click="() => func()">Rodar Código</button>
+      <button ref="runCode" class="run-code" @click="runCodeClass">
+        Rodar Código
+      </button>
     </div>
   </div>
 </template>
@@ -58,9 +77,9 @@ const text = ref(`const ${formattedTitle} = ${props.code}`);
   background-color: transparent;
   transition: all 1s ease;
   cursor: pointer;
-  background: rgb(176, 237, 143);
-  color: black;
-  border: 0;
+  background: #ffffff;
+  border: 0.5px grey solid;
+  transition: all 0.25s ease;
 }
 
 .absolute {
